@@ -1,18 +1,16 @@
 フラグ名,フラグ説明
-#temporary-unexpire-flags-m86,M86の時点で期限切れとなっている一時的に未期限のフラグ。これらのフラグはまもなく削除されます。- Mac、Windows、Linux、Chrome OS、Android
 #temporary-unexpire-flags-m87,M87の時点で期限が切れている一時的に未期限のフラグです。これらのフラグはまもなく削除されます。- Mac、Windows、Linux、Chrome OS、Android
+#temporary-unexpire-flags-m88,M88の時点で期限が切れている一時的に未期限のフラグです。これらのフラグはまもなく削除されます。- Mac、Windows、Linux、Chrome OS、Android
 #ignore-gpu-blocklist,内蔵ソフトウェアのレンダリングリストを上書きし、サポートされていないシステム構成でのGPUアクセラレーションを可能にします。- Mac、Windows、Linux、Chrome OS、Android
 #disable-accelerated-2d-canvas,ソフトウェアレンダリングを使用する代わりにGPUを使用して2Dキャンバスレンダリングを実行できるようにします。- Mac、Windows、Linux、Chrome OS、Android
 #overlay-strategies,大腿四頭筋をHWオーバーレイに昇格させるために使われている戦略を選択する - Mac、Windows、Linux、Chrome OS、Android
 #tint-composited-content,Vizを使用して合成したコンテンツを赤で着色し、デバッグやオーバーレイサポートの検討を支援します。- Mac、Windows、Linux、Chrome OS、Android
-#show-overdraw-feedback,要素の下に他の要素が描かれているかどうかに基づいて色分けし、描きすぎを可視化します。- Mac、Windows、Linux、Chrome OS、Android
 #ui-disable-partial-swap,部分的なスワップ動作を設定します。- Mac、Windows、Linux、Chrome OS、Android
 #enable-webrtc-capture-multi-channel-audio-processing,レンダリングプロセスでAPMを実行しているときに、マルチチャンネルのキャプチャオーディオをダウンミックスなしで処理するためのWebRTCをサポートしています。- Mac、Windows、Linux、Chrome OS、Android
 #enable-reader-mode,"Chromeのカスタマイズと制御」→「ページの蒸留」を選択して簡易Webページの閲覧を可能に - Mac, Windows, Linux, Chrome OS"
 #enable-webrtc-remote-event-log,WebRTC イベントログを収集し、クラッシュにアップロードできるようにします。この機能を有効にしても、効果を発揮するためにはポリシーの設定が必要になります。- Mac、Windows、Linux、Chrome OS
 #enable-webrtc-hybrid-agc,WebRTC Agc2デジタル適応とAgc1アナログ適応。- Mac、Windows、Linux、Chrome OS、Android
 #enable-webrtc-hide-local-ips-with-mdns,mDNSホスト名でローカルIPアドレスを隠します。- Mac、Windows、Linux、Chrome OS
-#enable-webrtc-use-min-max-vea-dimensions,有効にすると、WebRTC は、サポートされているように公開されているビデオ解像度の中でのみ Video Encode Accelerator を使用します。- Mac、Windows、Linux、Chrome OS、Android
 #enable-nacl,Chromeウェブストアからインストールされていないウェブアプリケーションでも、すべてのウェブアプリケーションのネイティブクライアントをサポート。- Mac、Windows、Linux、Chrome OS、Android
 #extensions-on-chrome-urls,拡張機能が明示的にこの許可を要求するchrome:// URL上での拡張機能の実行を有効にします。- Mac、Windows、Linux、Chrome OS、Android
 #show-autofill-type-predictions,WebフォームにAutofillフィールドタイプの予測をプレースホルダテキストとしてアノテーションします。- Mac、Windows、Linux、Chrome OS、Android
@@ -32,7 +30,8 @@
 #top-chrome-touch-ui,ブラウザのトップクロームでタッチUIのレイアウトを有効にする。- Mac、Windows、Linux、Chrome OS
 #disable-accelerated-video-decode,利用可能な場合は、ハードウェアで加速されたビデオデコード。- Mac、Windows、Chrome OS、Android
 #disable-accelerated-video-encode,利用可能な場合は、ハードウェアで加速されたビデオエンコード。- Mac、Windows、Chrome OS、Android
-#debug-packed-apps,パックされたアプリケーションの Inspect Element などのデバッグ用コンテキストメニューオプションを有効にします。- Mac、Windows、Linux、Chrome OS
+#enable-media-internals,chrome://media-internalsのデバッグページを有効にします。- Mac、Windows、Linux、Chrome OS、Android
+#zero-copy-video-capture,カメラはキャプチャ時にgpuフレンドリーなバッファを生成し、もしあれば、ハードウェアアクセラレーションされたビデオエンコーダはバッファを消費します。
 #username-first-flow,ユーザー名の保存とユーザー名の最初のフローでのユーザー名の入力をサポート。
 #enable-show-autofill-signatures,WebフォームにAutofill署名をHTML属性としてアノテーションします。また、パスワード生成に適したパスワードフィールドをマークします。- Mac、Windows、Linux、Chrome OS、Android
 #wallet-service-use-sandbox,開発者向け：Google Payments APIコール用のサンドボックスサービスを使用します。- Mac、Windows、Linux、Chrome OS、Android
@@ -49,22 +48,26 @@
 #disable-threaded-scrolling,スクロール関連の入力イベントのスレッド処理。これを無効にすると、そのようなスクロールイベントはすべてメインスレッドで処理されるようになります。これはほとんどのウェブサイトのスクロールパフォーマンスを劇的に低下させる可能性があることに注意してください。- Mac、Windows、Linux、Chrome OS、Android
 #isolate-origins,カンマ区切りのリストとして指定された追加のオリジンのセットに専用のプロセスが必要です。- Mac、Windows、Linux、Chrome OS、Android
 #site-isolation-trial-opt-out,サイト分離(SitePerProcess、IsolateOriginsなど)を無効にします。プロセス外の iframe に起因する可能性のあるバグを診断することを目的としています。サイト分離がコマンドラインスイッチを使って強制的に有効化されている場合や、エンタープライズポリシーを使っている場合は、オプトアウトの効果はありません。注意: これにより、ほとんどのコンピュータに影響を及ぼす Spectre CPU の脆弱性に対する重要な緩和策が無効になります。- Mac、Windows、Linux、Chrome OS、Android
+#isolation-by-default,オリジンを別個のプロセスに分離することを困難にするいくつかのウェブ API を変更しました。これらの変更は、理想的にはウェブの新しいデフォルト動作になるでしょうが、このフラグは、今日訪問したサイトでの体験を壊す可能性があります。- Mac、Windows、Linux、Chrome OS、Android
 #allow-previews,特定のプレビュー タイプが有効になっていること、およびクライアントが特定のトリガー条件を経験していることを条件に、プレビューを表示できるようにします。すべての可能性のあるプレビュータイプをオフにするためのキルスイッチとして使用することができます。- Mac、Windows、Linux、Chrome OS、Android
 #ignore-previews-blocklist,"PreviewsBlockListによる決定を無視する - Mac, Windows, Linux, Chrome OS, Android"
 #enable-data-reduction-proxy-server-experiment,バックエンドサーバーを設定することで、データを保存するための異なるアプローチを可能にする - Mac、Windows、Linux、Chrome OS、Android
+#enable-subresource-redirect,データ節約のためのサブリソース圧縮を許可 - Mac、Windows、Linux、Chrome OS、Android
 #enable-login-detection,ヒューリスティックに基づいてユーザーのサインインを検出できるようにします。- Mac、Windows、Linux、Chrome OS、Android
 #enable-preconnect-to-search,ユーザーのデフォルトの検索エンジンにプリコネクティングする機能を有効にします。- Mac、Windows、Linux、Chrome OS、Android
-#enable-noscript-previews,遅いネットワーク上の一部のページでJavaScriptを無効にする。- Mac、Windows、Linux、Chrome OS、Android
-#enable-resource-loading-hints,サーバーが提供するリソース読み込みヒントを使用して、遅いネットワーク接続上でプレビューを提供することを有効にします。- Mac、Windows、Linux、Chrome OS、Android
 #enable-previews-coin-flip,プレビューのコインフリップ実験を可能にする - Mac、Windows、Linux、Chrome OS、Android
 #enable-google-srp-isolated-prerender-probing,コミットをブロックする Isolated Prerenders のプロービングチェックを有効にします。- Mac、Windows、Linux、Chrome OS、Android
 #enable-google-srp-isolated-prerenders,Google SRP上のナビゲーション予測を完全に分離できるようにする。- Mac、Windows、Linux、Chrome OS、Android
 #enable-google-srp-isolated-prerender-nsp,分離されたプリレンダで NoStatePrefetch を有効にします。- Mac、Windows、Linux、Chrome OS、Android
+#allow-insecure-localhost,無効な証明書が提示された場合でも、HTTPS 上のローカルホストへのリクエストを許可する。- Mac、Windows、Linux、Chrome OS、Android
 #bypass-app-banner-engagement-checks,ユーザーが以前にサイトを訪問したことがあることや、最近バナーが表示されていないことを要求するなど、アプリバナーを表示するためのユーザーエンゲージメントチェックをバイパスします。これにより、開発者は、マニフェストの有無など、アプリバナーを表示するための他の要件が満たされているかどうかをテストすることができます。- Mac、Windows、Linux、Chrome OS、Android
-#enable-desktop-pwas-local-updating,サイトマニフェストデータが変更されたときに、インストールされているPWAがアプリマニフェストデータを更新できるようにします。- Mac、Windows、Linux、Chrome OS
+#enable-desktop-pwas-elided-extensions-menu,拡張機能の「パズルのかけら」アイコンをタイトルバーからWebアプリのウィンドウのアプリメニューに移動します。- Mac、Windows、Linux、Chrome OS
+#enable-desktop-pwas-flash-app-name-instead-of-origin,ウェブアプリのウィンドウを起動したときに、オリジンフラッシュをアプリ名フラッシュに置き換えます。- Mac、Windows、Linux、Chrome OS
 #enable-desktop-pwas-tab-strip,タブストリップを使ってPWAウィンドウがどのように見えるかを探る実験的なUI。- Mac、Windows、Linux、Chrome OS
 #enable-desktop-pwas-tab-strip-link-capturing,アプリスコープ内のリンクナビゲーションをキャプチャし、アプリのタブ付きウィンドウに取り込む「Desktop PWA tab strips」の実験的な挙動。- Mac、Windows、Linux、Chrome OS
-#enable-desktop-pwas-migration-user-display-mode-clean-up,クリーンアップコードを実行して、ウィンドウ/ブラウザタブの起動環境設定が正しく移行されていないウェブアプリを修正します。問題 https://crbug.com/1125020 を参照してください。- Mac、Windows、Linux、Chrome OS
+#enable-desktop-pwas-link-capturing,Web アプリのマニフェストでリンク キャプチャ動作を宣言できるようにします。https://github.com/WICG/sw-launch/blob/master/declarative のプロトタイプ実装
+#enable-desktop-pwas-run-on-os-login,インストールされているPWAを、OSユーザーがログインしたときに自動的に起動するように設定できるようにします。ブラウザが実行されていない状態でPWAを起動すると、セッションの復元に失敗することが知られています。https://crbug.com/938759 を参照してください。- Mac、Windows、Linux
+#record-web-app-debug-info,"ウェブアプリ関連のデバッグデータを追加記録して、chrome://internals/web-app - Mac, Windows, Linux, Chrome OS に表示できるようにします。"
 #use-sync-sandbox,Chrome Syncのテストサーバーに接続します。- Mac、Windows、Linux、Chrome OS、Android
 #load-media-router-component-extension,起動時にMedia Routerコンポーネント拡張機能をロードします。- Mac、Windows、Linux、Chrome OS
 #media-router-cast-allow-all-ips,メディアルーターがRFC1918/RFC4193のプライベートアドレスだけでなく、すべてのIPアドレスでキャストデバイスに接続できるようにします。- Mac、Windows、Linux、Chrome OS
@@ -73,7 +76,6 @@
 #allow-all-sites-to-initiate-mirroring,この機能を有効にすると、すべてのWebサイトがPresentation API経由でタブミラーリングを開始するようにリクエストできるようになります。この機能を有効にするには、#cast-media-route-providerも有効にする必要があります - Mac、Windows、Linux、Chrome OS
 #enable-migrate-default-chrome-app-to-web-apps-gsuite,デフォルトでインストールされている G Suite Chrome アプリの対応するウェブアプリへの移行を有効にします。- Mac、Windows、Linux、Chrome OS
 #enable-migrate-default-chrome-app-to-web-apps-non-gsuite,デフォルトでインストールされている非G Suite Chromeアプリの対応するウェブアプリへの移行を有効にします。- Mac、Windows、Linux、Chrome OS
-#mac-syscall-sandbox,macOSのサンドボックスがシステムコールをフィルタリングするかどうかを制御します。- マック
 #mac-v2-gpu-sandbox,macOSのGPUプロセスがV1またはV2のサンドボックスを使用するかどうかを制御します。- マック
 #system-keyboard-lock,ウェブサイトが keyboard.lock() API を使用してシステムのキーボードショートカットを傍受し、フルスクリーンモードのときにイベントを直接ウェブサイトにルーティングできるようにします。- Mac、Windows、Linux、Chrome OS
 #disallow-doc-written-script-loads,document.write でメインフレームに挿入されたサードパーティ製パーサブロックスクリプトのフェッチを無効にします。- Mac、Windows、Linux、Chrome OS、Android
@@ -81,10 +83,12 @@
 #force-ui-direction,UI言語のデフォルトの方向を上書きして、UIを左から右(LTR)または右から左(RTL)モードに明示的に強制します。- Mac、Windows、Linux、Chrome OS、Android
 #force-text-direction,UIテキストの文字毎の方向性を、文字言語のデフォルトの方向性を上書きして、左から右（LTR）または右から左（RTL）モードに明示的に強制します。- Mac、Windows、Linux、Chrome OS、Android
 #enable-tls13-early-data,このオプションは TLS 1.3 Early Data を有効にし、互換性のある TLS 1.3 サーバへの接続を再開する際にハンドシェイク中に GET リクエストを送信できるようにします。- Mac、Windows、Linux、Chrome OS、Android
+#post-quantum-cecpq2,このオプションは、TLS (CECPQ2) のポスト量子 (すなわち量子コンピュータに耐性のある) 鍵交換アルゴリズムを有効にします。- Mac、Windows、Linux、Chrome OS、Android
 #PasswordImport,パスワード設定のインポート機能 - Mac、Windows、Linux、Chrome OS、Android
 #enable-force-dark,ダークなテーマを使ってすべてのWebコンテンツを自動的にレンダリングする - Mac、Windows、Linux、Chrome OS、Android
 #enable-experimental-accessibility-language-detection,ページ内コンテンツの言語検出を有効にして、スクリーンリーダーなどの支援技術に表示します。- Mac、Windows、Linux、Chrome OS、Android
 #enable-experimental-accessibility-language-detection-dynamic,動的コンテンツの言語検出を有効にして、スクリーンリーダーなどの支援技術に表示します。- Mac、Windows、Linux、Chrome OS、Android
+#enable-aria-element-reflection,"IDREFなしで他の要素を直接参照するARIAリレーションシップ属性の設定を有効にする - Mac, Windows, Linux, Chrome OS, Android"
 #enable-immersive-fullscreen-toolbar,フルスクリーンでツールバーを自動的に非表示にして表示します。- Macの場合
 #enable-experimental-fling-animation,Windows上のネイティブアプリの動作に基づいたタッチフリングカーブの使用を可能にします。- Mac、Windows、Linux、Chrome OS、Android
 #enable-web-payments-experimental-features,実験的なWebペイメントAPI機能を有効にする - Mac、Windows、Linux、Chrome OS、Android
@@ -92,7 +96,7 @@
 #enable-debug-for-store-billing,TWA内のアプリストアでの購入（Google Playストアなど）は、支払い要求APIを使用して要求することができます。このフラグにより、TWAはアプリストアからインストールしなければならないという制約がなくなります。- Mac、Windows、Linux、Chrome OS、Android
 #enable-debug-for-secure-payment-confirmation,このフラグは、WebAuthnのPaymentCredentialとPaymentRequest APIのセキュアな支払い確認では、ユーザー検証用のプラットフォーム認証子を使用しなければならないという制限を解除します。- Mac、Windows、Linux、Chrome OS、Android
 #fill-on-account-select,ページロード時にクレデンシャルを自動入力するのではなく、ユーザーが明示的にアカウントを選択した場合にパスワードを入力するようにしました。- Mac、Windows、Linux、Chrome OS、Android
-#enable-generic-sensor-extra-classes,Generic Sensor APIに基づいたセンサクラスの追加セットを有効にし、これまで利用できなかったプラットフォーム機能（AmbientLightSensorや磁力計インターフェイスなど）を公開します。- Mac、Windows、Linux、Chrome OS、Android
+#enable-generic-sensor-extra-classes,Generic Sensor APIに基づいたセンサークラスの追加セットを有効にし、これまで利用できなかったプラットフォーム機能（AmbientLightSensorや磁力計インターフェイスなど）を公開します。- Mac、Windows、Linux、Chrome OS、Android
 #enable-autofill-credit-card-ablation-experiment,有効にした場合、クレジットカードの自動入力候補は表示されません。- Mac、Windows、Linux、Chrome OS、Android
 #new-usb-backend,"macOSとWindows用の新しい実験的なUSBバックエンドを有効にする - Mac, Windows"
 #omnibox-clobber-triggers-contextual-web-zero-suggest,この機能を有効にすると、ユーザーがオムニボックスのテキスト全体をクリアすると（Backspaceなどで）、Chromeは他のページの分類（コンテクストウェブ）に対してZeroSuggestの提案を要求するようになります。- Mac、Windows、Linux、Chrome OS
@@ -115,12 +119,14 @@
 #omnibox-rich-autocompletion-split,ユーザ入力を分割して自動補完と混合することを許可します; 例えば、ユーザ入力 'x z' を 'x [y ]z' として自動補完することができます。- Mac、Windows、Linux、Chrome OS
 #omnibox-rich-autocompletion-promising,タイトルと接頭辞以外の自動補完を許可します。- Mac、Windows、Linux、Chrome OS
 #omnibox-bookmark-paths,"ブックマークのパスにマッチする入力を許可します。例えば、'planets jupiter'は'惑星'を含むパスにある'Jupiter'というタイトルのブックマークを提案することができます。- Mac, Windows, Linux, Chrome OS"
+#omnibox-disable-cgi-param-matching,提案をスコアリングする際にCGIパラメータ名にマッチを使用しないようにします。- Mac、Windows、Linux、Chrome OS
 #force-color-profile,オペレーティング システムで指定されたウィンドウの現在のモニターの色ではなく、特定のカラー プロファイルを Chrome で強制的に使用します。- Mac、Windows、Linux、Chrome OS、Android
 #force-effective-connection-type,ネットワーク品質推定子が返す現在の接続の実効接続タイプをオーバーライドします。Slow 2G on Cellularは、セルラーネットワークに接続されている場合はSlow 2Gを返し、セルラーネットワークに接続されていない場合は実際の推定有効接続タイプを返します。プレビューは通常、2G ネットワークで提供されます。- Mac、Windows、Linux、Chrome OS、Android
 #forced-colors,ウェブコンテンツの強制カラーモードを有効にします。- Mac、Windows、Linux、Chrome OS、Android
 #memlog,サンプリングされたメモリ割り当てプロファイルを記録するヒーププロファイリングサービスを開始します。サンプリングの分解能は --memlog-sampling-rate フラグで制御します。記録されたヒープダンプは chrome://tracing [category:memory-infra] と chrome://memory-internals で取得できます。この設定は、どのプロセスを開始時からプロファイル化するかを制御します。後で任意のプロセスをプロファイルするには、chrome://memory-internals ページを使用してください。- Mac、Windows、Linux、Chrome OS、Android
 #memlog-sampling-rate,ヒーププロファイリングサービスは、ポアソンプロセスを使用してアロケーションをサンプリングします。サンプル間隔のデフォルト値は100000(100KB)です。これにより、大規模かつ/または頻繁なアロケーション[size * frequency >> 100KB]ではノイズが少なくなります。これは、集約された数値[例えば、mallocされたオブジェクトの合計サイズ]と、大規模なおよび/または頻繁なアロケーションを高い信頼性で信頼できることを意味します。インターバルが低いほど、より高いサンプル解像度が得られますが、より高いパフォーマンスオーバーヘッドを犠牲にしています。- Mac、Windows、Linux、Chrome OS、Android
 #memlog-stack-mode,デフォルトでは、ヒーププロファイリングサービスはネイティブスタックを記録します。スタックをシンボル化するためには、後処理のステップが必要です。スレッド名でネイティブ」は、各ネイティブスタックの最初のフレームとしてスレッド名を追加します。トレースイベントを識別子として使用して擬似的にスタックを記録することも可能です。両方を混在させることも可能です。- Mac、Windows、Linux、Chrome OS、Android
+#omnibox-default-typed-navigations-to-https,ユーザーが 'example.com' のようなオムニボックスにプロトコルのない URL を入力した場合、デフォルトのプロトコルとして HTTPS を使用します。現在、このようなエントリは http://example.com に移動します。この機能を有効にすると、HTTPS URL が利用可能な場合は https://example.com に移動します。タイムアウト時間内に HTTPS URL が利用可能かどうかを Chrome が判断できない場合は、HTTP URL に戻ります。- Mac、Windows、Linux、Chrome OS、Android
 #omnibox-ui-sometimes-elide-to-registrable-domain,オムニボックスでは、ヒューリスティックに応じて、サブドメインだけでなく、定常状態で表示されているURLからパス、クエリ、参照を非表示にすることがあります。omnibox-ui-reveal-steady-state-url-path-query-and-ref-on-hoverまたは#omnibox-ui-hide-steady-state-url-path-query-and-ref-on-interactionのうち少なくとも1つが有効になっていない限り、何の効果もありません。- Mac、Windows、Linux、Chrome OS
 #omnibox-ui-reveal-steady-state-url-path-query-and-ref-on-hover,オムニボックスでは、ホバー上に表示された定常状態のURLのパス、クエリ、参照を明らかにします。- Mac、Windows、Linux、Chrome OS
 #omnibox-ui-hide-steady-state-url-path-query-and-ref-on-interaction,オムニボックスでは、ユーザーがページを操作した際に、定常状態で表示されたURLのパス、クエリ、参照を非表示にすることができます。- Mac、Windows、Linux、Chrome OS
@@ -130,15 +136,12 @@
 #omnibox-dynamic-max-autocomplete,Omnibox UIに表示されるオートコンプリートマッチの最大数を、URLマッチ数に基づいて動的に設定します。- Mac、Windows、Linux、Chrome OS、Android
 #omnibox-bubble-url-suggestions,URLの上の検索をグループ化した後のURLサジェストのバブリングを設定します。- Mac、Windows、Linux、Chrome OS、Android
 #omnibox-webui-omnibox-popup,有効にすると、WebUI を使用してオムニボックスの提案ポップアップをレンダリングします。- Mac、Windows、Linux、Chrome OS
+#search-prefetch,デフォルトの検索エンジンで、検索結果ページへのサジェストのプリフェッチ動作を指定できるようにします。- Mac、Windows、Linux、Chrome OS、Android
 #block-insecure-private-network-requests,安全でないコンテキストが、よりプライベートな IP アドレスに対してサブリソース要求を行うことを防ぎます。IP アドレス IP1 は、1) IP1 がローカルホストで IP2 がそうでない場合、または 2) IP1 がプライベートで IP2 がパブリックである場合、IP2 よりもプライベートな IP アドレスです。これは、CORS-RFC1918 の完全施行に向けた第一歩です： https://wicg.github.io/cors-rfc1918 - Mac、Windows、Linux、Chrome OS、Android
-#force-empty-CORB-and-CORS-allowlist,CORB および CORS の許可リストからすべての Chrome 拡張機能を削除します。許可リストとコンテンツ スクリプトのセキュリティ モデルの変更の詳細については、https://www.chromium.org/Home/chromium-security/extension-content-script-fetches - Mac、Windows、Linux、Chrome OS を参照してください。
-#cross-origin-opener-policy-reporting,クロスオリジンオープナーポリシーのレポートを有効にする - Mac、Windows、Linux、Chrome OS、Android
-#cross-origin-opener-policy-access-reporting,クロスオリジンオープナーポリシーのアクセスレポートを可能にする - Mac、Windows、Linux、Chrome OS、Android
-#cross-origin-isolated,"いくつかの BrowsingContext グループを ""crossOriginIsolated"" としてマークします。これらのグループは、互換性のある {Origin,COOP,COEP} のセットを使用しているドキュメントのみをホストすることができ、効果的に隔離されています。- Mac、Windows、Linux、Chrome OS、Android"
-#delay-async-script-execution,非同期スクリプトの実行が遅延します。- Mac、Windows、Linux、Chrome OS、Android
+#mbi-mode,AgentSchedulingGroupインフラストラクチャを介して、独立したエージェントクラスタスケジューリングを可能にします。- Mac、Windows、Linux、Chrome OS、Android
 #delay-competing-low-priority-requests,優先度の低いリクエストは、優先度の高いリクエストと競合する場合には遅延します。- Mac、Windows、Linux、Chrome OS、Android
 #intensive-wake-up-throttling,有効にすると、DOM タイマーからのウェイクアップは、5 分間非表示にしたページで 1 分間に 1 つに制限されます。詳細は https://www.chromestatus.com/feature/4718288976216064 を参照してください。- Mac、Windows、Linux、Chrome OS、Android
-#read-later,ユーザーがタブを後から保存できるようにする 後で保存したタブにアクセスするための新しいボタンとメニューを有効にします。- Mac、Windows、Linux、Chrome OS、Android
+#read-later,ブックマークアイコンをクリックするか、タブを右クリックすると、タブを読書リストに追加することができます。- Mac、Windows、Linux、Chrome OS、Android
 #tab-groups-auto-create,タブグループが有効になっている場合、ユーザーのグループを自動的に作成します。- Mac、Windows、Linux、Chrome OS
 #tab-groups-collapse,タブグループが有効になっている場合、タブグループを折りたたみ・拡張できるようにします。- Mac、Windows、Linux、Chrome OS
 #tab-groups-collapse-freezing,タブグループの折りたたみ時にタブがフリーズすることを実験的に確認しました。- Mac、Windows、Linux、Chrome OS
@@ -146,13 +149,13 @@
 #scrollable-tabstrip-buttons,スクロール可能タブストリップフラグを有効にすると、ボタンをタブストリップに永続的に表示できるようになります。- Mac、Windows、Linux、Chrome OS
 #side-panel,サイドパネルでコンテンツをホストします。- Mac、Windows、Linux、Chrome OS
 #promo-browser-commands,NTPプロモから送信されるブラウザコマンドを実行可能にする - Mac、Windows、Linux、Chrome OS、Android
-#ntp-iframe-one-google-bar,iframeでのOneGoogleBarの読み込みを有効にします。そうでない場合、OneGoogleBarはchrome://new-tab-page上でインラインで読み込まれます。- Mac、Windows、Linux、Chrome OS
-#ntp-one-google-bar-modal-overlays,そうでない場合は、クリップパス定義を使用して、OneGoogleBarの可視要素を持たない部分をクリップして切り離します。- Mac、Windows、Linux、Chrome OS
+#ntp-cache-one-google-bar,chrome://new-tab-pageでOneGoogleBarのキャッシュされたレスポンスを利用できるようにします。- Mac、Windows、Linux、Chrome OS
 #ntp-repeatable-queries,新規タブページで、最も訪問したタイルとして繰り返しクエリを浮上させることができます。- Mac、Windows、Linux、Chrome OS
-#ntp-webui,WebUIの新規タブページはローカルNTPの代わりになる。- Mac、Windows、Linux、Chrome OS
 #ntp-modules,新規タブページにモジュールを表示します。- Mac、Windows、Linux、Chrome OS
+#ntp-drive-module,新しいタブページに Google Drive モジュールを表示 - Mac、Windows、Linux、Chrome OS
 #ntp-recipe-tasks-module,新規タブページにレシピタスクモジュールを表示します。- Mac、Windows、Linux、Chrome OS
 #ntp-shopping-tasks-module,新規タブページにショッピングタスクモジュールを表示します。- Mac、Windows、Linux、Chrome OS
+#ntp-chrome-cart-module,新規タブページにクロームカートモジュールを表示します。- Mac、Windows、Linux、Chrome OS
 #enable-pixel-canvas-recording,ピクセル キャンバス録画では、コンポジッターがピクセルに沿ったラスタ コンテンツを作成し、テキストのレンダリングを向上させることができます。この機能は、デバイスが小数スケールファクタを使用している場合に有効にする必要があります。- Mac、Windows、Linux、Chrome OS
 #enable-parallel-downloading,並列ダウンロードを有効にしてダウンロード速度を高速化 - Mac、Windows、Linux、Chrome OS、Android
 #enable-pointer-lock-options,ポインタロックの unadjustedMovement を有効にします。unadjustedMovementがtrueに設定されている場合、ポインタの動きは、マウスの加速度などの基礎となるプラットフォームの変更の影響を受けません。- Mac、Windows、Linux、Chrome OS
@@ -163,23 +166,24 @@
 #installed-apps-in-cbd,インストールされているアプリのデータが削除されないように、ユーザーがインストールされているアプリのデータを保護できるクリアブラウジングデータフローに、インストールされているアプリの警告ダイアログを追加します。- Mac、Windows、Linux、Chrome OS
 #enable-network-logging-to-file,ユーザーデータディレクトリにある netlog.json という名前のファイルへのネットワークロギングを有効にします。このファイルは chrome://net-internals にインポートできます。- Mac、Windows、Linux、Chrome OS、Android
 #enable-web-authentication-cable-v2-support,Web 認証 API で使用する QR ベースのペアレス BLE プロトコルを有効にします。(まだ有効になっていないプラットフォームでは、クラウドベースのプロトコルも有効になります) - Mac、Windows、Linux、Chrome OS、Android
-#force-preferred-interval-for-video,この機能を有効にすると、他のページコンテンツの更新頻度に関係なく、動画再生速度に合わせて合成速度が低下します - Mac、Windows、Linux、Chrome OS
 #accessible-pdf-form,PDFフォームのアクセシビリティ対応を可能にします。- Mac、Windows、Linux、Chrome OS
 #pdf-form-save,記入済みのフォームデータをPDFに保存できるようにする - Mac、Windows、Linux、Chrome OS
-#pdf-honor-js-content-settings,オリジンの JavaScript コンテンツ設定を、そのオリジンから開いた PDF で優先するかどうかを有効にします。- Mac、Windows、Linux、Chrome OS
 #pdf-viewer-update,有効にすると、PDFビューアは、新しいオプションと機能を備えた更新されたUIを表示します。- Mac、Windows、Linux、Chrome OS
+#pdf-viewer-document-properties,有効にすると、PDFビューアは、ツールバーのオーバーフローメニューに、文書のプロパティを含むダイアログを開くためのオプションを含むようになります。- Mac、Windows、Linux、Chrome OS
+#pdf-viewer-presentation-mode,有効にすると、PDFビューアは、プレゼンテーション（フルスクリーン）モードを入力するためのツールバーのオーバーフローメニューにオプションが含まれています。- Mac、Windows、Linux、Chrome OS
 #cups-ipp-printing-backend,PPD APIを呼び出す元のCUPSバックエンドではなく、CUPS IPP印刷バックエンドを使用します。- マック
+#enable-table-ng,Blinkの次世代テーブルレイアウトを有効にする。- Mac、Windows、Linux、Chrome OS、Android
 #enable-lazy-image-loading,loading=lazy' 属性を持つ画像の読み込みを、その近くでページがスクロールダウンされるまで遅延させます。- Mac、Windows、Linux、Chrome OS、Android
 #enable-lazy-frame-loading,loading=lazy' 属性を持つ iframe の読み込みを、ページがスクロールダウンされるまで遅延させます。- Mac、Windows、Linux、Chrome OS、Android
 #autofill-enable-toolbar-status-chip,有効にすると、ツールバーのプロフィールアバターアイコンの横にあるステータスチップに自動記入データ関連のアイコンが表示されます。- Mac、Windows、Linux
 #unsafely-treat-insecure-origin-as-secure,"与えられた(安全でない)オリジンを安全なオリジンとして扱います。複数のオリジンをカンマ区切りのリストで指定することができます。オリジンにはプロトコルを指定しなければなりません。安全なコンテキストの定義については、https://w3c.github.io/webappsec-secure-contexts/ - Mac, Windows, Linux, Chrome OS, Android を参照してください。"
 #treat-unsafe-downloads-as-active-content,安全でないファイル（コードを実行する可能性のあるファイル）のダウンロードを禁止します。- Mac、Windows、Linux、Chrome OS、Android
 #detect-target-embedding-lookalikes,対象の埋め込みドメイン（例：google.com.example.com）に移動する際に、そっくりさんのインタースティシャルを表示します。- Mac、Windows、Linux、Chrome OS、Android
-#enable-accessibility-live-captions,Chromeで再生しているメディアのキャプションを生成するライブキャプション機能を有効にします。chrome://settings/accessibilityでこの機能をオンにしてください。- Mac、Windows、Linux、Chrome OS
-#allow-sxg-certs-without-extension,CanSignHttpExchangesDraft拡張子を持たない証明書で署名されたOrigin-Signed HTTP Exchangesを受け入れます。警告。これを有効にすると、セキュリティリスクが発生する可能性があります。- Mac、Windows、Linux、Chrome OS、Android
+#enable-accessibility-live-caption,Chromeで再生しているメディアのキャプションを生成するライブキャプション機能を有効にします。chrome://settings/accessibilityでこの機能をオンにしてください。- Mac、Windows、Linux、Chrome OS
 #enable-sxg-subresource-prefetching,この機能を有効にすると、署名付き交換所の配布者は「alternate」リンクヘッダを設定することで、代替の署名付き交換所サブリソースを Chrome に知らせることができます。メインの署名付き取引所のパブリッシャーがメインの署名付き取引所の署名済み内部レスポンスに「allowed-alt-sxg」リンクヘッダを設定している場合、Chrome は代替の署名付き取引所サブリソースをプリフェッチし、それらをロードします。- Mac、Windows、Linux、Chrome OS、Android
 #enable-sxg-prefetch-cache-for-navigations,有効にすると、プリフェッチされた署名付き交換は、フレームに接続されたプリフェッチキャッシュに保存されます。内部応答のボディはブロブとして保存され、署名付き交換の検証プロセスは、次のナビゲーションのためにスキップされます。- Mac、Windows、Linux、Chrome OS、Android
 #enable-autofill-account-wallet-storage,オートフィル用のアカウントデータのエフェメラルストレージを有効にします。- Mac、Windows、Linux、Chrome OS、Android
+#enable-resampling-scroll-events-experimental-prediction,フレームが表示されているときに、Vsync 時間後のスクロール量を予測して、より密接に一致するようにします。- Mac、Windows、Linux、Chrome OS、Android
 #compositor-threaded-scrollbar-scrolling,メインスレッドの代わりにコンポジタースレッドでポインタベースのスクロールバースクロールを有効にします。
 #happiness-tracking-surveys-for-desktop-devtools-issues-cookies-same-site,デスクトップのChrome DevToolsで、同一サイトのCookieの問題に対する幸福度追跡調査の表示を有効にします。- Mac、Windows、Linux、Chrome OS
 #happiness-tracking-surveys-for-desktop-demo,デスクトップ - Mac、Windows、Linux、Chrome OSのユーザーに幸福度追跡調査のデモを表示することを有効にする
@@ -188,7 +192,7 @@
 #happiness-tracking-surveys-for-desktop-settings-privacy,プライバシー設定のためのハピネス追跡調査をデスクトップのユーザーに表示することを有効にする - Mac、Windows、Linux、Chrome OS
 #use-multilogin-endpoint,アイデンティティの一貫性を保つために Gaia OAuth マルチログインを使用します。- Mac、Windows、Linux
 #enable-new-profile-picker,新しいプロファイルピッカーの実装を可能にします。- Mac、Windows、Linux
-#enable-profiles-ui-revamp,Mac、Windows、Linuxの設定で、新しいサインインフロー、プロファイルのプロモバブル、カラーピッカーなど、プロファイル関連の機能をいくつか有効にします。
+#enable-sign-in-profile-creation,プロファイル作成で新しいサインインフローを有効にする - Mac、Windows、Linux
 #destroy-profile-on-browser-close,Chrome が完全に閉じたときではなく、プロファイルの最後のブラウザウィンドウが閉じたときにメモリやその他のリソースを解放する。- Mac、Windows、Linux
 #click-to-call-ui,テレフォニー機能を持つユーザーの利用可能なデバイスのリストを表示することで、クリックコール機能の信号をデスクトップ上で処理できるようにします。- Mac、Windows、Linux、Chrome OS
 #remote-copy-receiver,リモートコピー機能を有効にして、内容をクリップボードに書き込んだり、ユーザーに通知を表示したりしてメッセージを処理することができます。- Mac、Windows、Linux、Chrome OS
@@ -201,9 +205,8 @@
 #enable-gpu-service-logging,実際のGLドライバの呼び出しを印刷できるようにします。- Mac、Windows、Linux、Chrome OS、Android
 #hardware-media-key-handling,メディアキーを使用してアクティブなメディアセッションを制御することを有効にします。MediaSessionServiceも有効にする必要があります - Mac、Windows、Linux、Chrome OS
 #autofill-use-improved-label-disambiguation,この機能を有効にすると、オートフィルドロップダウンのサジェストのラベルが、改良された曖昧性解消フォーマットを使用して表示されるようになりました。- Mac、Windows、Linux、Chrome OS、Android
-#file-handling-api,ファイルハンドリングAPIを有効にして、ウェブサイトをファイルハンドラーとして登録できるようにします。- Mac、Windows、Linux、Chrome OS
+#file-handling-api,ファイルハンドリングAPIを有効化し、ウェブサイトをファイルハンドラーとして登録できるようにします。- Mac、Windows、Linux、Chrome OS
 #installable-ink-drop,InstallableInkDrop は、InkDrop のリファクタリング作業の一部です。これにより、利用可能な場合にはパイロット的な実装が可能になります。- Mac、Windows、Linux、Chrome OS
-#enable-md-rounded-corners-on-dialogs,セカンダリ UI のコーナー半径を大きくします。- Mac、Windows、Linux、Chrome OS
 #enable-new-badge-on-menu-items,有効にすると、新しい機能にアクセスするメニュー項目を識別するための「新規」バッジが表示されます。- Mac、Windows、Linux、Chrome OS
 #strict-origin-isolation,サイト分離ポリシーを強化する実験的なセキュリティモードです。サイト分離でスキームと eTLD+1 の代わりにオリジンを使用するかどうかを制御します。- Mac、Windows、Linux、Chrome OS、Android
 #enable-skia-renderer,この機能を有効にすると、ディスプレイコンポジターはOpenGL ESの代わりにSkiaをグラフィックスAPIとして使用します。- Mac、Windows、Linux、Android
@@ -212,18 +215,19 @@
 #enable-autofill-credit-card-authentication,この機能を有効にすると、Googleペイメントからクレジットカードを取得する際に、プラットフォーム認証機能（利用可能な場合）を使用してカードの所有権を確認するオプションがユーザーに与えられます。- Mac、Windows、Linux、Chrome OS、Android
 #storage-access-api,Storage Access APIを有効にして、Webサイトがストレージへのアクセスを制限されている場合に、Webサイトがストレージへのアクセスを要求できるようにします。- Mac、Windows、Linux、Chrome OS、Android
 #same-site-by-default-cookies,SameSite属性を指定していないクッキーは、SameSite=Laxであるかのように扱います。サードパーティの使用を有効にするには、サイトが SameSite=None を指定する必要があります。- Mac、Windows、Linux、Chrome OS、Android
-#enable-removing-all-third-party-cookies,chrome://settings/siteData上のUIを有効にして、サードパーティ製のCookieとサイトデータをすべて削除します。- Mac、Windows、Linux、Chrome OS
 #cookies-without-same-site-must-be-secure,有効にした場合、SameSite 制限なしのクッキーも Secure にする必要があります。セキュア属性を指定せずに SameSite 制限なしのクッキーが設定されている場合は、拒否されます。このフラグは、「SameSite by default cookies」も有効になっている場合にのみ有効になります。- Mac、Windows、Linux、Chrome OS、Android
 #enterprise-reporting-api-keychain-recreation,エンタープライズレポートのプライベートAPIがMac上でキーチェーンアイテムを再作成できるようにしました。再作成されたアイテムは、他のバイナリからもアクセスできます。- Mac
 #enterprise-realtime-extension-request,リアルタイムの拡張要求のアップロードを有効にします。この機能を使用するには、エンタープライズレポートと拡張機能リクエストが有効になっている必要があります。- Mac、Windows、Linux、Chrome OS
 #enable-unsafe-fast-js-calls,警告: 型チェック、いくつかのPOD型と配列型はまだサポートされていないので、クラッシュする可能性があります。- Mac、Windows、Linux、Chrome OS、Android
 #allow-sync-xhr-in-page-dismissal,ユーザーによってページが移動されたり閉じられたりしているときに、ページが閉じられている間に同期した XHR リクエストを可能にします。- Mac、Windows、Linux、Chrome OS、Android
 #enable-sync-requires-policies-loaded,起動前にすべてのポリシーがロードされるのを待つようにSyncの動作を有効にする - Mac、Windows、Linux、Chrome OS、Android
-#form-controls-dark-mode,この機能を有効にすると、フォームコントロールとスクロールバーがダークなテーマでレンダリングされ、ダークな配色をサポートしているウェブページ上でのみ、またOSをダークなテーマに切り替えた場合にレンダリングされます。- Mac、Windows、Linux、Chrome OS
+#enable-policy-blocklist-throttle-requires-policies-loaded,Urlブロックリストのスロットルがすべてのポリシーのロードを待つように動作を有効にする - Mac、Windows、Linux、Chrome OS、Android
+#form-controls-dark-mode,この機能を有効にすると、フォームコントロールとスクロールバーがダークなテーマでレンダリングされ、ダークな配色をサポートしているウェブページでのみ、OSがダークなテーマに切り替わったときにレンダリングされます。- Mac、Windows、Linux、Chrome OS
 #color-picker-eye-dropper,この機能を有効にすると、カラーピッカーにはスポイトコントロールが含まれ、色の選択に使用できます。- Mac、Windows
 #audio-worklet-realtime-thread,オーディオストリームの安定性を向上させるために、リアルタイムの優先スレッド上でオーディオワークレットの操作を実行します。- Mac、Windows、Linux、Chrome OS、Android
-#cookies-page-redesign,"クッキーページの再設計を有効にする - Mac, Windows, Linux, Chrome OS"
+#privacy-sandbox-settings,プライバシーサンドボックスの設定を有効にする - Mac、Windows、Linux、Chrome OS、Android
 #safe-browsing-enhanced-protection-message-in-interstitials,この機能を有効にすると、ユーザーが強化保護モードになっていない場合、セーフ ブラウジング インタースティシャルと SSL インタースティシャルに強化保護メッセージが表示されます。- Mac、Windows、Linux、Chrome OS、Android
+#safe-browsing-real-time-url-lookup-enterprise-ga-endpoint,有効にすると、エンタープライズリアルタイムURLチェックが新しいエンドポイントに送信されます。- Mac、Windows、Linux、Chrome OS、Android
 #cookie-deprecation-messages,送信/受信クッキーに影響を与える予定の廃止予定のメッセージをDevToolsに表示します。- Mac、Windows、Linux、Chrome OS、Android
 #enable-autofill-credit-card-upload-feedback,有効にすると、クレジットカードのアップロードに成功するとアバターボタンにハイライトが表示され、そうでない場合はアイコンが更新され、クリックするとカードの保存失敗のバブルが表示されます。- Mac、Windows、Linux
 #font-access,実験的な Font Access API を有効にし、ウェブサイトがローカルフォントを列挙し、そのテーブルデータにアクセスできるようにします。- Mac、Windows、Linux、Chrome OS、Android
@@ -238,11 +242,8 @@
 #turn-off-streaming-media-caching-always,メディア再生時のディスクアクティビティを低減し、省電力化を実現します。- Mac、Windows、Linux、Chrome OS、Android
 #enable-defer-all-script,遅いページでの同期スクリプトの遅延を有効にします。- Mac、Windows、Linux、Chrome OS、Android
 #enable-defer-all-script-without-optimization-hints,Defer Script プレビューの最適化ヒントのチェックをスキップし、ECT トリガーのしきい値が 4G に設定されていると仮定します（これは最適化ヒントで指定されています）。残りのチェックは引き続き実行されます。- Mac、Windows、Linux、Chrome OS、Android
-#decode-jpeg-images-to-yuv,RGBの代わりにYUVから4:2:0フォーマットのJPEG画像をデコードしてレンダリングします。- Mac、Windows、Linux、Chrome OS、Android
-#decode-webp-images-to-yuv,RGBではなくYUVからロッシーなWebP画像をデコードしてレンダリングします。また、GPUラスタライズまたはOOPラスタライズも必要です。- Mac、Windows、Linux、Chrome OS、Android
 #dns-httpssvc,この機能を有効にすると、Chrome は設定済みの DoH サーバーに HTTPSSVC レコードを問い合わせることができます。HTTPSSVC レコードが返された場合、Chrome は URL を HTTPS にアップグレードすることがあります。レコードに QUIC のサポートが示されている場合、Chrome は最初の接続で QUIC を試行することがあります。- Mac、Windows、Chrome OS、Android
 #web-bundles,Webバンドル(Bundled HTTP Exchanges)ナビゲーションの実験的なサポートを有効にします。- Mac、Windows、Linux、Chrome OS、Android
-#enable-autofill-upi-vpa,この機能を有効にすると、オートフィルが支払いフォームで UPI/VPA 値を認識したときに、その値を保存することができます。保存されている場合は、VPA を期待するフィールドへの入力用に提供されます。- Mac、Windows、Linux、Chrome OS、Android
 #quiet-notification-prompts,通知の許可要求に対して、より静かな許可プロンプトを有効にします。サイトが通知の表示を希望する場合、通常のモーダルダイアログがより静かなバージョンに置き換えられます。- Mac、Windows、Linux、Chrome OS、Android
 #abusive-notification-permission-revocation,不正なオリジンに対する通知許可の取り消しを有効にします。サービスワーカーにプッシュメッセージをディスパッチする前に、セーフブラウジングによってオリジンが検証されます。不正な通知許可要求やコンテンツを持つオリジンは、通知許可を取り消されます。- Mac、Windows、Linux、Chrome OS、Android
 #passwords-account-storage,ログインしているが同期していないユーザーのために、パスワードをセカンドストレージに保存することを可能にします。
@@ -253,28 +254,24 @@
 #percent-based-scrolling,有効にすると、マウスホイールとキーボードのスクロールは、スクロールサイズのパーセンテージでスクロールします。- Mac、Windows、Linux、Chrome OS、Android
 #scroll-unification,Blink からスクロール処理のコードを削除するリファクタリングプロジェクト。挙動やパフォーマンスには影響しません。- Mac、Windows、Linux、Chrome OS、Android
 #enable-core-location-backend,Geolocation API のバックエンドとして Core Location API を使用できるようになります。
-#enable-core-location-implementation,macOS上で位置情報のパーミッションを取得するためのCore Location APIの使用を有効にする - Mac
 #enable-new-mac-notification-api,macOS 10.14+で動作するAppleの新しい通知APIの利用を有効にする - Mac
 #enable-de-jelly,ゼリースクロール」を緩和しようとする実験的な効果を有効にします。これは実験的な実装であり、既知のバグ、ビジュアルアーチファクト、パフォーマンスコストがあります。この実装はいつでも削除することができます。- Mac、Windows、Linux、Chrome OS、Android
 #enable-heavy-ad-intervention,デバイスリソースを使いすぎる広告をアンロードします。- Mac、Windows、Linux、Chrome OS、Android
 #heavy-ad-privacy-mitigations,重い広告の介入に対してプライバシーの緩和を有効にします。これを無効にすると、介入が決定論的になります。デフォルトは有効。- Mac、Windows、Linux、Chrome OS、Android
-#enable-ftp,有効にすると、ブラウザはディレクトリリストを表示するか、FTP でリソースをダウンロードすることで、ftp:// URL へのナビゲートを処理します。無効にすると、ブラウザは ftp:// URL に対して特別な処理を行わず、デフォルトでは、URL の処理を基礎となるプラットフォームに延期します。- Mac、Windows、Linux、Chrome OS、Android
-#autofill-enable-virtual-card,有効にすると、すべての要件が満たされている場合、オートフィルはフォーム入力で仮想クレジットカードを使用することを提案します。- Mac、Windows、Linux、Chrome OS
+#autofill-enable-virtual-card,有効にすると、すべての要件が満たされている場合、Autofillは、フォーム入力で仮想クレジットカードを使用することを提案します。- Mac、Windows、Linux、Chrome OS
 #raw-clipboard,生の / サニタイズされていないクリップボードの内容を読み書きできるようにします。https://github.com/WICG/raw-clipboard-access を参照してください。- Mac、Windows、Linux
 #freeze-user-agent,"User-Agentリクエストヘッダーを静的文字列に設定します。これは、現在のUser-Agent文字列フォーマットに準拠していますが、デスクトップとAndroidのどちらか一方のみを表示し、'mobile'フラグが設定されている場合は、'mobile'フラグが設定されています - Mac, Windows, Linux, Chrome OS, Android"
 #enable-user-data-snapshot,Chrome アップデート後のユーザー データ ディレクトリのスナップショットを取得し、バージョン ロールバック後に復元できるようにします。- Mac、Windows、Linux
 #legacy-tls-enforced,非推奨で将来的に削除される予定のレガシーTLSバージョン（TLS 1.0とTLS 1.1）を使用しているサイトの接続エラーとインタースティシャルを有効にします。- Mac、Windows、Linux、Chrome OS、Android
-#color-provider-redirection,カラーリクエストを可能な限りカラープロバイダにリダイレクトします。- Mac、Windows、Linux、Chrome OS
 #trust-tokens,プロトタイプの Trust Token API (https://github.com/wicg/trust-token-api) を有効にします。- Mac、Windows、Linux、Chrome OS、Android
-#media-history,Webサイトのメディア再生周辺のデータを記録する「メディアヒストリー」を有効にします。- Mac、Windows、Linux、Chrome OS、Android
 #copy-link-to-text,選択したテキストが強調表示されているページへのリンクをコピーできるように、コンテキストメニューに項目を追加します。- Mac、Windows、Linux、Chrome OS
+#shared-highlighting-use-blocklist,ブロックリストを使用して、パーソナライズされたコンテンツや動的なコンテンツ、またはその他の技術的な制限により、URL が生成され、共有時に実際に機能する可能性が低い特定のサイトで、共有ハイライトリンクの生成を無効にします。- Mac、Windows、Linux、Chrome OS、Android
 #app-cache,無効にすると、すべての AppCache コードをオフにします。これにより、開発者は、将来 AppCache が削除されたときにコードが正しく動作するかどうかをテストできます。無効にすると、プロファイルディレクトリからの AppCache データも削除されます。- Mac、Windows、Linux、Chrome OS、Android
-#enable-autofill-cache-server-card-info,この機能を有効にすると、サーバカードがアンマスクされると、その情報はページナビゲーションまでキャッシュされ、同じページでの連続した塗りつぶしを簡単にすることができます。- Mac、Windows、Linux、Chrome OS、Android
 #autofill-enable-sticky-payments-bubble,この機能を有効にすると、ナビゲーション時にすべての自動支払いバブルが解除されません。- Mac、Windows、Linux、Chrome OS
 #enable-experimental-cookie-features,クッキーの設定、送信、管理に影響を与える新しい機能を有効にします。有効化された機能は随時変更される場合があります。- Mac、Windows、Linux、Chrome OS、Android
 #autofill-enable-google-issued-card,有効にすると、オートフィルのサジェストでGoogle発行のカードが利用できるようになります。- Mac、Windows、Linux、Chrome OS、Android
 #permission-chip,ロケーションバーのチップを使用した実験的な許可プロンプトを有効にします。- Mac、Windows、Linux、Chrome OS
-#dice-web-signin-interception,この機能を有効にすると、Chrome はウェブ上でのサインイン後にプロファイルの作成を促進することがあります。- Mac、Windows、Linux
+#dice-web-signin-interception,この機能を有効にすると、Chrome はウェブ上でのサインイン後にプロファイル作成を促進することがあります。- Mac、Windows、Linux
 #new-canvas-2d-api,canvas 2D API の進行中の機能を有効にします。https://github.com/fserb/canvas2d を参照。- Mac、Windows、Linux、Chrome OS、Android
 #enable-translate-sub-frames,サブフレーム（メインフレームと同様に）の翻訳を有効にする - Mac、Windows、Linux、Chrome OS、Android
 #enable-media-feeds,メディアフィード機能を有効にして、この機能をサポートしているウェブサイトからメディアアイテムのフィードを取得できるようにします。- Mac、Windows、Linux、Chrome OS
@@ -296,9 +293,7 @@
 #h264-decoder-is-buffer-complete-frame,H.264 デコーダは各 DecoderBuffer を完全なフレームとして扱います。デフォルトでは有効になっています。- Mac、Windows、Linux、Chrome OS、Android
 #content-settings-redesign,新しいコンテンツ設定ページのUIを有効にします。- Mac、Windows、Linux、Chrome OS
 #enable-tab-search,Top Chrome UIのタブ検索機能を有効にすると、ポップアップバブルが表示され、現在開いているタブの上から検索できるようになります。- Mac、Windows、Linux、Chrome OS
-#enable-avif,AVIF 画像フォーマットの画像デコードサポートを追加しました。- Mac、Windows、Linux、Chrome OS
 #passwords-weakness-check,"パスワードチェックでパスワードの脆弱性をチェックできるようにする - Mac, Windows, Linux, Chrome OS"
-#well-known-change-password,"有効にすると、パスワードチェックアップの 'パスワード変更' ボタンは .known/change-password のパスにリダイレクトされます。このパスはサイトのパスワード変更フォームを指すことになっています。サイトが .known/change-password をサポートしていない場合、フォールバックURLが利用可能かどうかがチェックされます。そうでない場合、ユーザーは元のサイトにリダイレクトされます。- Mac, Windows, Linux, Chrome OS, Android"
 #window-naming,ウィンドウのネーミングUIが有効かどうか。- Mac、Windows、Linux、Chrome OS、Android
 #videotoolbox-vp9-decoding,VP9ビデオのハードウェアデコードのためのVideoToolboxの使用法を制御します。- Macの場合
 #sync-autofill-wallet-offer-data,有効にすると、オートフィルウォレットオファーのデータタイプを同期することができます。- Mac、Windows、Linux、Chrome OS、Android
@@ -315,3 +310,13 @@
 #detect-form-submission-on-form-clear,"パスワード変更フォームのフォーム送信がクリアされてページから削除されないフォームを検出 - Mac, Windows, Linux, Chrome OS, Android"
 #shutdown-support-for-keepalive,有効にすると、keepalive requests (https://fetch.spec.whatwg.org/#request-keepalive-flag) はブラウザのシャットダウンシーケンスを短時間ブロックします。- Mac、Windows、Linux、Chrome OS
 #permission-predictions,ユーザーが許可を与える可能性が低いと予測される場合に、より静かな UI を使用して許可要求を表面化するために、許可予測サービスを使用します。chrome://flags/#quiet-notification-prompts と `Safe Browsing Enhanced Protection` が有効になっている必要があります。- Mac、Windows、Linux、Chrome OS、Android
+#show-performance-metrics-hud,現在のページのパフォーマンスメトリクスをページ上のヘッドアップ表示で表示する - Mac、Windows、Linux、Chrome OS、Android
+#enable-prerender2,"NoStatePrefetch の代わりに <link rel=prenderer> の新しい prenderer の実装を有効にします。- Mac, Windows, Linux, Chrome OS, Android"
+#change-password-affiliation,.known/change-passwordに対応していないサイトの場合は、アフィリエーションサービスを利用して取得しようとします。- Mac、Windows、Linux、Chrome OS、Android
+#use-of-hash-affiliation-fetcher,affiliation fetcherへのすべてのリクエストは、ハッシュ接頭辞のルックアップを介して行われます。非同期ユーザーに対してハッシュアフィリサービスを利用できるようにします。- Mac、Windows、Linux、Chrome OS、Android
+#safety-check-weak-passwords,弱いパスワードが見つかった場合、安全チェックで表示します。- Mac、Windows、Linux、Chrome OS
+#chrome-labs,ツールバー メニューから Chrome Labs にアクセスして、ユーザーに向けた実験的な機能を確認することができます。- Mac、Windows、Linux
+#enable-first-party-sets,この機能を有効にすると、Chrome は SameParty クッキー属性などの機能に First-Party セットを適用します。- Mac、Windows、Linux、Chrome OS、Android
+#pdf-xfa-forms,PDF での XFA フォームのサポートを有効にします。Chrome が XFA サポート付きでビルドされていない場合は、影響はありません。- Mac、Windows、Linux、Chrome OS、Android
+#send-tab-to-self-when-signed-in,Google アカウントに「サインイン」しているユーザー（Sync を有効にしていないユーザー）でもタブ共有機能を利用できるようになります。- Mac、Windows、Linux、Chrome OS、Android
+#sync-compromised-credentials,危殆化したパスワードやフィッシングされたパスワードを含むセキュリティ問題の同期を可能にします。- Mac、Windows、Linux、Chrome OS、Android
